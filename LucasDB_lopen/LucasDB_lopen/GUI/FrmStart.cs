@@ -16,5 +16,16 @@ namespace LucasDB_lopen
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Btnafsluiten_Click(object sender, EventArgs e)
+        {
+            // afsluiten 
+            Close();
+        }
     }
 }
