@@ -10,26 +10,11 @@ using System.Windows.Forms;
 
 namespace LucasDB_lopen
 {
-    public partial class FormInschrijven : Form
+    public partial class FrmBewerken : Form
     {
-        public FormInschrijven()
+        public FrmBewerken()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAnuleren_Click(object sender, EventArgs e)

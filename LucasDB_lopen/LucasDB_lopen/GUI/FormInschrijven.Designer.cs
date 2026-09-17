@@ -31,8 +31,8 @@
             this.lblNaam = new System.Windows.Forms.Label();
             this.lblAfstand = new System.Windows.Forms.Label();
             this.grbBetaald = new System.Windows.Forms.GroupBox();
-            this.rbBetaald = new System.Windows.Forms.RadioButton();
             this.rbNietbetaald = new System.Windows.Forms.RadioButton();
+            this.rbBetaald = new System.Windows.Forms.RadioButton();
             this.btnInschrijven = new System.Windows.Forms.Button();
             this.btnAnuleren = new System.Windows.Forms.Button();
             this.txtNaam = new System.Windows.Forms.TextBox();
@@ -70,6 +70,19 @@
             this.grbBetaald.TabIndex = 2;
             this.grbBetaald.TabStop = false;
             this.grbBetaald.Text = "Heeft de persoon betaald ?";
+            this.grbBetaald.Enter += new System.EventHandler(this.grbBetaald_Enter);
+            // 
+            // rbNietbetaald
+            // 
+            this.rbNietbetaald.AutoSize = true;
+            this.rbNietbetaald.Location = new System.Drawing.Point(24, 64);
+            this.rbNietbetaald.Name = "rbNietbetaald";
+            this.rbNietbetaald.Size = new System.Drawing.Size(80, 33);
+            this.rbNietbetaald.TabIndex = 4;
+            this.rbNietbetaald.TabStop = true;
+            this.rbNietbetaald.Text = "Nee";
+            this.rbNietbetaald.UseVisualStyleBackColor = true;
+            this.rbNietbetaald.CheckedChanged += new System.EventHandler(this.rbNietbetaald_CheckedChanged);
             // 
             // rbBetaald
             // 
@@ -83,17 +96,6 @@
             this.rbBetaald.UseVisualStyleBackColor = true;
             this.rbBetaald.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // rbNietbetaald
-            // 
-            this.rbNietbetaald.AutoSize = true;
-            this.rbNietbetaald.Location = new System.Drawing.Point(24, 64);
-            this.rbNietbetaald.Name = "rbNietbetaald";
-            this.rbNietbetaald.Size = new System.Drawing.Size(80, 33);
-            this.rbNietbetaald.TabIndex = 4;
-            this.rbNietbetaald.TabStop = true;
-            this.rbNietbetaald.Text = "Nee";
-            this.rbNietbetaald.UseVisualStyleBackColor = true;
-            // 
             // btnInschrijven
             // 
             this.btnInschrijven.Location = new System.Drawing.Point(93, 325);
@@ -102,6 +104,7 @@
             this.btnInschrijven.TabIndex = 3;
             this.btnInschrijven.Text = "Inschijven";
             this.btnInschrijven.UseVisualStyleBackColor = true;
+            this.btnInschrijven.Click += new System.EventHandler(this.btnInschrijven_Click);
             // 
             // btnAnuleren
             // 
@@ -119,6 +122,7 @@
             this.txtNaam.Name = "txtNaam";
             this.txtNaam.Size = new System.Drawing.Size(100, 34);
             this.txtNaam.TabIndex = 5;
+            this.txtNaam.TextChanged += new System.EventHandler(this.txtNaam_TextChanged);
             // 
             // cmbAfstand
             // 
@@ -131,6 +135,7 @@
             this.cmbAfstand.Name = "cmbAfstand";
             this.cmbAfstand.Size = new System.Drawing.Size(121, 37);
             this.cmbAfstand.TabIndex = 6;
+            this.cmbAfstand.SelectedIndexChanged += new System.EventHandler(this.cmbAfstand_SelectedIndexChanged);
             // 
             // FormInschrijven
             // 
@@ -146,7 +151,7 @@
             this.Controls.Add(this.lblAfstand);
             this.Controls.Add(this.lblNaam);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormInschrijven";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inschrijven: ";
