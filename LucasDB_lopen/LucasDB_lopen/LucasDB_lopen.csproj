@@ -49,6 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clauses\Deelnemer.cs" />
+    <Compile Include="FormInschrijven.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInschrijven.Designer.cs">
+      <DependentUpon>FormInschrijven.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmStart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     </Compile>
     <Compile Include="Business\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormInschrijven.resx">
+      <DependentUpon>FormInschrijven.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmStart.resx">
       <DependentUpon>FrmStart.cs</DependentUpon>
     </EmbeddedResource>

@@ -42,6 +42,7 @@
             this.Btnbewerken.TabIndex = 0;
             this.Btnbewerken.Text = "Bewerken ";
             this.Btnbewerken.UseVisualStyleBackColor = true;
+            this.Btnbewerken.Click += new System.EventHandler(this.Btnbewerken_Click);
             // 
             // Btnafsluiten
             // 
@@ -61,6 +62,7 @@
             this.Btnopzoeken.TabIndex = 2;
             this.Btnopzoeken.Text = "Opzoeken ";
             this.Btnopzoeken.UseVisualStyleBackColor = true;
+            this.Btnopzoeken.Click += new System.EventHandler(this.Btnopzoeken_Click);
             // 
             // button3
             // 
@@ -83,7 +85,7 @@
             this.Controls.Add(this.Btnafsluiten);
             this.Controls.Add(this.Btnbewerken);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmStart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Startmenu: ";
