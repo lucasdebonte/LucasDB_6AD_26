@@ -31,7 +31,7 @@
             this.Btnbewerken = new System.Windows.Forms.Button();
             this.Btnafsluiten = new System.Windows.Forms.Button();
             this.Btnopzoeken = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnInschrijven = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Btnbewerken
@@ -64,15 +64,15 @@
             this.Btnopzoeken.UseVisualStyleBackColor = true;
             this.Btnopzoeken.Click += new System.EventHandler(this.Btnopzoeken_Click);
             // 
-            // button3
+            // btnInschrijven
             // 
-            this.button3.Location = new System.Drawing.Point(12, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(183, 38);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "inschrijven";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnInschrijven.Location = new System.Drawing.Point(12, 12);
+            this.btnInschrijven.Name = "btnInschrijven";
+            this.btnInschrijven.Size = new System.Drawing.Size(183, 38);
+            this.btnInschrijven.TabIndex = 3;
+            this.btnInschrijven.Text = "inschrijven";
+            this.btnInschrijven.UseVisualStyleBackColor = true;
+            this.btnInschrijven.Click += new System.EventHandler(this.button3_Click);
             // 
             // FrmStart
             // 
@@ -80,7 +80,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(217, 205);
             this.ControlBox = false;
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnInschrijven);
             this.Controls.Add(this.Btnopzoeken);
             this.Controls.Add(this.Btnafsluiten);
             this.Controls.Add(this.Btnbewerken);
@@ -98,7 +98,7 @@
         private System.Windows.Forms.Button Btnbewerken;
         private System.Windows.Forms.Button Btnafsluiten;
         private System.Windows.Forms.Button Btnopzoeken;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnInschrijven;
     }
 }
 

@@ -19,7 +19,16 @@ namespace LucasDB_lopen
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            // object aanmaken van form 
+             FormInschrijven nieuwFrm = new FormInschrijven();
+
+            // dit dorm hiden 
+            Hide();
+            // object tonen
+            nieuwFrm.ShowDialog();
+
+            // dit form tonen 
+            Show();
         }
 
         private void Btnafsluiten_Click(object sender, EventArgs e)
@@ -30,12 +39,33 @@ namespace LucasDB_lopen
 
         private void Btnbewerken_Click(object sender, EventArgs e)
         {
+            // object aanmaken van form 
+            FrmBewerken nieuwFrm = new FrmBewerken();
 
+            // dit dorm hiden 
+            Hide();
+
+            // object tonen
+            nieuwFrm.ShowDialog();
+
+            // dit form tonen 
+            Show();
         }
 
         private void Btnopzoeken_Click(object sender, EventArgs e)
         {
+            // object aanmaken van form 
+            FrmOpzoeken nieuwFrm = new FrmOpzoeken();
 
+            // dit dorm hiden 
+            Hide();
+            // object tonen
+            nieuwFrm.ShowDialog();
+
+            // dit form tonen 
+            Show();
         }
+
+       
     }
 }
