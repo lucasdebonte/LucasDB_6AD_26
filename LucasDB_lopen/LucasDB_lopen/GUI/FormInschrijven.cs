@@ -49,7 +49,47 @@ namespace LucasDB_lopen
 
         private void btnInschrijven_Click(object sender, EventArgs e)
         {
+            // kijken of alles werd ingevuld.
+            if (txtNaam.Text != "" && cmbAfstand.SelectedIndex != -1)//als een combobox niet veranderd is dan is de index -1. 
+            {
+                string ontvNm = txtNaam.Text;
+                int ontvAfs = 0;
+                if (cmbAfstand.SelectedIndex == 0)
+                {
+                    ontvAfs = 5;
+                }
+                else if (cmbAfstand.SelectedIndex == 1)
+                {
+                    ontvAfs = 10;
+                }
+                else if (cmbAfstand.SelectedIndex == 2)
+                {
+                    ontvAfs = 20;
+                }
 
+                bool ontvBet = false;
+                if (rbBetaald.Checked)
+                {
+                    ontvBet = true;
+                }
+                // Stuur door naar een business om op te slaan 
+                Program.Inschrijven(ontvNm, ontvAfs , ontvBet);
+
+                // Bevestig bij de gebruiker 
+                MessageBox.Show("Deze persoon is ingeschreven", "succes!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // reset from 
+                txtNaam.Text = "";
+                cmbAfstand.SelectedIndex = -1;
+                cmbAfstand.Text = "";
+                rbNietbetaald.Checked = true; 
+
+            }
+            else
+            {
+                // Foutmelding
+                MessageBox.Show("u heeft niet alles ingevuld", "Fout!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txtNaam_TextChanged(object sender, EventArgs e)
@@ -61,5 +101,13 @@ namespace LucasDB_lopen
         {
 
         }
+
+        private void FormInschrijven_Load(object sender, EventArgs e)
+        {
+            rbNietbetaald.Checked = true;
+
+        }
+
+        
     }
 }

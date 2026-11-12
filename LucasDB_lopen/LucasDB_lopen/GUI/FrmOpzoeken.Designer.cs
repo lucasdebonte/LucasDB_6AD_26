@@ -74,6 +74,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(383, 37);
             this.comboBox1.TabIndex = 19;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lblKies
             // 
@@ -122,6 +123,7 @@
             this.Name = "FrmOpzoeken";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opzoeken van deelnemers ";
+            this.Load += new System.EventHandler(this.FrmOpzoeken_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

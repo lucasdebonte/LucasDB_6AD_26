@@ -12,9 +12,9 @@ namespace LucasDB_lopen
         // 11/09/2026
 
         // Velden + properties
-        String _naam { get; set; } = "";
-        int _afstand { get; set; } = 0;
-        bool _betaald { get; set; } = false;
+        public String _naam { get; set; } = "";
+        public int _afstand { get; set; } = 0;
+        public bool _betaald { get; set; } = false;
 
 
         // Functies
@@ -26,11 +26,11 @@ namespace LucasDB_lopen
             antwoord = $"Deelnemer : {_naam}, loopt{_afstand}km";
             if (_betaald)
             {
-                antwoord += "en heeft betaald";
+                antwoord += $"en heeft betaald {Environment.NewLine}";
             }
             else
             {
-                antwoord += "en heeft nog niet betaald";
+                antwoord += $"en heeft nog niet betaald {Environment.NewLine}";
             }
 
             return antwoord;

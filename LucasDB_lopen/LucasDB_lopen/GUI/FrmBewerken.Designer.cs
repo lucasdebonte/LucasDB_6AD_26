@@ -59,6 +59,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(208, 37);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // grbBetaald
             // 
@@ -148,6 +149,7 @@
             this.btnAanpassen.TabIndex = 10;
             this.btnAanpassen.Text = "Aanpassen";
             this.btnAanpassen.UseVisualStyleBackColor = true;
+            this.btnAanpassen.Click += new System.EventHandler(this.btnAanpassen_Click);
             // 
             // lblVerwijderen
             // 
@@ -157,6 +159,7 @@
             this.lblVerwijderen.TabIndex = 14;
             this.lblVerwijderen.Text = "Verwijderen";
             this.lblVerwijderen.UseVisualStyleBackColor = true;
+            this.lblVerwijderen.Click += new System.EventHandler(this.lblVerwijderen_Click);
             // 
             // FrmBewerken
             // 
@@ -179,6 +182,7 @@
             this.Name = "FrmBewerken";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBewerken";
+            this.Load += new System.EventHandler(this.FrmBewerken_Load);
             this.grbBetaald.ResumeLayout(false);
             this.grbBetaald.PerformLayout();
             this.ResumeLayout(false);

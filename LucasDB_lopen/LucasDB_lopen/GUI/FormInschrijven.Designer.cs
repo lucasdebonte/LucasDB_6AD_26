@@ -155,6 +155,7 @@
             this.Name = "FormInschrijven";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inschrijven: ";
+            this.Load += new System.EventHandler(this.FormInschrijven_Load);
             this.grbBetaald.ResumeLayout(false);
             this.grbBetaald.PerformLayout();
             this.ResumeLayout(false);
