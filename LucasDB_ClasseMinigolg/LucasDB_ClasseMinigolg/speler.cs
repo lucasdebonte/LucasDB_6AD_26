@@ -8,38 +8,63 @@ namespace LucasDB_ClasseMinigolg
 {
     public class speler
     {
+        //Lucas De Bonte 
+        //12/11/2026
+        //Project Minigolf
+        //Velden + properties
         public int _spelerID { get; set; } = -1;
-        public string _voornaam { get; set; }
-        public string _familienaam { get; set; }
-        public int _totaalslagen { get; set; } = 0;
+        public string _voornaam { get; set; } = "John";
+        public string _achternaam { get; set; } = "Doe";
+        public int _totaalSlagen { get; set; } = 0;
 
-       
+        //Functies
+
         /// <summary>
-        /// De voledige naam teruggeven.
+        /// Maakt volledige naam van voornaam en achternaam en stuurt door
         /// </summary>
         /// <returns></returns>
         public string VolledigeNaam()
         {
-            return $"{_voornaam} {_familienaam}";
+            return $"{_voornaam} {_achternaam}";
         }
 
         /// <summary>
-        /// Alle gegevens van de speler terug geven. 
+        /// Geeft alle gegevens: volledige naam + aantal slagen van speler
         /// </summary>
         /// <returns></returns>
-        public string AlleGegevens()
+        public string Allegegevens()
         {
-            
-            return  $"SpelerID: {_spelerID}\n" +
-                    $"Voornaam: {_voornaam}\n" +
-                    $"Familienaam: {_familienaam}\n" +
-                    $"Totaal slagen: {_totaalslagen}\n"; 
+            string antwoord = $"Speler: {VolledigeNaam()} {Environment.NewLine}";
+            antwoord += $"       aantal slagen: {_totaalSlagen}";
 
+            return antwoord;
         }
-        // Methode: extra slagen toevoegen
-        public void SlagenToevoegen(int aantalSlagen)
+
+        /// <summary>
+        /// Past aantal slagen van speler aan op basis van de ontvangen gegevens
+        /// </summary>
+        /// <param name="ontvSlagen"> aantal slagen dat toegevoegd moet worden </param>
+        public void SlagenToevoegen(int ontvSlagen)
         {
-            _totaalslagen += aantalSlagen;
+            _totaalSlagen += ontvSlagen;
         }
-    }
-}
+
+        //Constructors
+
+        public speler() 
+        { }
+
+        public speler(int ontvID, string ontvVoornaam, string ontvAchternaam)
+        {
+            _voornaam = ontvVoornaam;
+            _achternaam = ontvAchternaam;
+        }
+
+        public speler(int ontvID, string ontvVoornaam, string ontvAchternaam, int ontvAantSlagen)
+        {
+            _spelerID = ontvID;
+            _voornaam = ontvVoornaam;
+            _achternaam = ontvAchternaam;
+            _totaalSlagen = ontvAantSlagen;
+        }
+    }    }
